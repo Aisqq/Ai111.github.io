@@ -5,12 +5,17 @@
   <meta charset="UTF-8">
   <title>圣诞快乐</title>
   <link rel="stylesheet" type="text/css" href="style.css" >
+  <style>
+    #playButton {
+      display: none;
+    }
+    </style>
 </head>
 
 <body>
   <ul class="bgg">
     <li class="sphere"></li>
-    <p class="text">圣诞快乐</p>
+    <p class="text" id="playText">圣诞快乐</p>
   </ul>
   <ul class="tree">
     <li class="top-star"> </li>
@@ -173,6 +178,69 @@
     <li class="light l24"></li>
     <li class="light l25"></li>
   </ul>
+
+
+<button id="playButton">play music</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const music = document.getElementById('christmasMusic');
+    document.body.addEventListener('click', function() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    });
+  });
+</script>
+
+<audio id="christmasMusic" src="589p1-fw4yk.mp3" autoplay></audio>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const music = document.getElementById('christmasMusic');
+    music.play();
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const playText = document.getElementById('playText');
+    const music = document.getElementById('christmasMusic');
+    playText.addEventListener('click', function() {
+      music.play();
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const playText = document.getElementById('playText');
+    const music = document.getElementById('christmasMusic');
+    playText.addEventListener('click', function() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const playText = document.getElementById('playText');
+    const music = document.getElementById('christmasMusic');
+    playText.addEventListener('click', function() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    });
+  });
+</script>
 </body>
 
-</html>
